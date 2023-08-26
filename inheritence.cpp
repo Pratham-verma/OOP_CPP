@@ -6,10 +6,11 @@ class employee {
 
 public:
 int id;
-float salary = 34.45;
+float salary ;
 
 employee(int inpid){
     id = inpid;
+    salary = 34.45;
 }
  employee(){}
 };
@@ -17,8 +18,9 @@ employee(int inpid){
 
 
 //derived class
-class programmer : employee
+class programmer : public employee
 {
+  public:  
   programmer (int inpid){
 
      id = inpid;
@@ -27,11 +29,10 @@ class programmer : employee
 };
 
 
-
-
-
 int main(){
-    programmer p();
+    employee;
+    programmer p(12);
+    cout<<p.id<<endl;
 
 
     
